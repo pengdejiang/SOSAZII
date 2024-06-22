@@ -1113,7 +1113,6 @@ WH河南卫视,http://oscam.picp.net:4020/rtp/239.21.2.37:5002$山/东电信2+
 WH黑龙江卫视,http://oscam.picp.net:4020/rtp/239.21.1.91:5002$山/东电信2+
 WH湖北卫视,http://oscam.picp.net:4020/rtp/239.21.1.163:5002$山/东电信2+
 WH湖南卫视,http://oscam.picp.net:4020/rtp/239.21.1.158:5002$山/东电信2+
-WH湖南卫视,http://oscam.picp.net:4020/rtp/239.21.1.18:5002$山/东电信2+
 X纪实科教,http://oscam.picp.net:4020/rtp/239.21.1.172:5002$山/东电信2+
 WJ江苏卫视,http://oscam.picp.net:4020/rtp/239.21.1.89:5002$山/东电信2+
 WJ江西卫视,http://oscam.picp.net:4020/rtp/239.21.1.167:5002$山/东电信2+
@@ -1131,7 +1130,6 @@ WS四川卫视,http://oscam.picp.net:4020/rtp/239.21.2.15:5002$山/东电信2+
 WS天津卫视,http://oscam.picp.net:4020/rtp/239.21.1.165:5002$山/东电信2+
 西藏卫视,http://oscam.picp.net:4020/rtp/239.21.1.46:5002$山/东电信2+
 新疆卫视,http://oscam.picp.net:4020/rtp/239.21.1.45:5002$山/东电信2+
-WY云南卫视,http://oscam.picp.net:4020/rtp/239.21.1.40:5002$山/东电信2+
 WZ浙江卫视,http://oscam.picp.net:4020/rtp/239.21.1.90:5002$山/东电信2+
 WC重庆卫视,http://oscam.picp.net:4020/rtp/239.21.1.233:5002$山/东电信2+
 山DA教育,http://oscam.picp.net:4020/rtp/239.21.1.169:5002$山/东电信2+
