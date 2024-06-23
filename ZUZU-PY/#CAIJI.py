@@ -65,7 +65,7 @@ for keyword in keywords:
     current_time = datetime.now()
     timeout_cnt = 0
     result_urls = set() 
-    while len(result_urls) == 0 and timeout_cnt <= 5:
+    while len(result_urls) == 0 and timeout_cnt <= 25:
         try:
             search_url = 'https://fofa.info/result?qbase64='
             search_txt = f'\"udpxy\" && country=\"CN\" && region=\"{province}\" && org=\"{org}\"'
@@ -75,7 +75,7 @@ for keyword in keywords:
             search_txt = base64.b64encode(bytes_string).decode('utf-8')
             search_url += search_txt
             print(f"{current_time} 查询运营商 : {province}{isp} ，查询网址 : {search_url}")
-            response = requests.get(search_url, timeout=30)
+            response = requests.get(search_url, timeout=240)
             # 处理响应
             response.raise_for_status()
             # 检查请求是否成功
