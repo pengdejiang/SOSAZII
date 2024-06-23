@@ -140,11 +140,7 @@ CETV5,http://ds920.dsmynas.net:5555/udp/226.0.2.99:8704$山/西联通2+
 
 
 IV凤凰卫视中文台,http://asl.x3322.net:8888/udp/239.93.0.162:2192$四/川联通1+
-IV凤凰卫视中文台,http://asl.x3322.net:8888/udp/239.93.1.9:2192$四/川联通1+
 IV凤凰卫视资讯台,http://asl.x3322.net:8888/udp/239.93.0.118:2191$四/川联通1+
-IV凤凰卫视资讯台,http://asl.x3322.net:8888/udp/239.93.1.4:2191$四/川联通1+
-
-
 
 CHC高清电影,http://plex.home.yulei.online:9999/udp/226.0.2.93:8004$山/西联通1+
 CHC动作电影,http://plex.home.yulei.online:9999/udp/226.0.2.94:8012$山/西联通1+
