@@ -2295,7 +2295,7 @@ with open("AMER-delete.txt",'r', encoding='utf-8') as file: #打开原始文件
 
     lines = file.readlines()    #读取所有行
 
-with open("SOSAZI-VERYGOOD.txt",'w', encoding='utf-8') as file:   #新建输出文件
+with open("SOSAZI-over.txt",'w', encoding='utf-8') as file:   #新建输出文件
 
     for line in lines:  #查找每一行
 		#如果IP当中包含下面数字
@@ -2305,6 +2305,29 @@ with open("SOSAZI-VERYGOOD.txt",'w', encoding='utf-8') as file:   #新建输出�
         else:     #其他一律写入文件
             file.write(line)
 	#结束---删除IP段任务完成
+
+
+# 开始去重复-打开文档并读取所有行 
+with open('SOSAZI-over.txt', 'r', encoding="utf-8") as file:
+ lines = file.readlines()
+ 
+# 使用列表来存储唯一的行的顺序 
+ unique_lines = [] 
+ seen_lines = set() 
+
+# 遍历每一行，如果是新的就加入unique_lines 
+for line in lines:
+ if line not in seen_lines:
+  unique_lines.append(line)
+  seen_lines.add(line)
+
+# 将唯一的行写入新的文档 
+with open('SOSAZI-VERYGOOD.txt', 'w', encoding="utf-8") as file:
+ file.writelines(unique_lines)
+
+# 结束去重复
+
+##################################################################################################################################SPLIT#
 
 #删除所有临时文件--删除清单在下面列出
 os.remove("合并.txt")
@@ -2414,6 +2437,8 @@ os.remove("TT25.txt")
 os.remove("TT26.txt")
 
 os.remove("TT30.txt")
+
+os.remove("SOSAZI-over.txt")
 
 
 print("任务运行完毕")
