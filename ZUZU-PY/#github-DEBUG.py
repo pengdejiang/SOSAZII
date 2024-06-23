@@ -2295,7 +2295,7 @@ with open("AMER-delete.txt",'r', encoding='utf-8') as file: #打开原始文件
 
     lines = file.readlines()    #读取所有行
 
-with open("thankyou00.txt",'w', encoding='utf-8') as file:   #新建输出文件
+with open("SOSAZI-over.txt",'w', encoding='utf-8') as file:   #新建输出文件
 
     for line in lines:  #查找每一行
 		#如果IP当中包含下面数字
