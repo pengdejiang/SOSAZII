@@ -4,7 +4,7 @@ name: speedtest-sosazi  #这个是测速sosazi
 on:
   workflow_dispatch:
   schedule:
-  - cron: '11 12 * * *'  #4&&&
+  - cron: '13 8 * * *'  #4&&&
 # 提交报错解决方案_加入写入权限
 permissions:
   contents: write
