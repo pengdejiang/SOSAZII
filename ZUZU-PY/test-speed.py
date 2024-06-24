@@ -24,7 +24,7 @@ with open("SOSAZI-VERYGOOD.txt", 'r', encoding='utf-8') as file:
         if line:
             channel_name, channel_url = line.split('//')
             import re
-            if 'http' in channel_name):   # 提取所有http链接的行
+            if 'http' in channel_name:   # 提取所有http链接的行
                 channels.append((channel_name, channel_url))
 
 # 定义工作线程函数
