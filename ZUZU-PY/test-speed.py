@@ -22,9 +22,9 @@ with open("SOSAZI-VERYGOOD.txt", 'r', encoding='utf-8') as file:
     for line in lines:
         line = line.strip()
         if line:
-            channel_name, channel_url = line.split('//')
+            channel_name, channel_url = line.split(',')
             import re
-            if 'http' in channel_name:   # 提取所有http链接的行
+            if 'http' in channel_url:   # 提取所有http链接的行
                 channels.append((channel_name, channel_url))
 
 # 定义工作线程函数
@@ -111,8 +111,8 @@ with open("sosazi-SPEED-test.txt", 'w', encoding='utf-8') as file:
     file.write('test-speed-delete\n')
     for result in results:
         channel_name, channel_url, speed = result
-        if 'http' in channel_name: 
-            if channel_name in channel_counters:
+        if 'http' in channel_url: 
+            if channel_url in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
                 else:
