@@ -248,7 +248,6 @@ X金鹰纪实,http://plex.home.yulei.online:9999/udp/226.0.2.194:9464$山/西联
 Y金鹰卡通,http://plex.home.yulei.online:9999/udp/226.0.2.172:9288$山/西联通1+
 Y动漫秀场,http://plex.home.yulei.online:9999/rtp/226.0.2.183:9376$山/西联通1+
 Y金色学堂,http://plex.home.yulei.online:9999/rtp/226.0.2.182:9368$山/西联通1+
-Y动漫秀场,http://plex.home.yulei.online:9999/udp/226.0.2.183:9376$山/西联通1+
 Y优优宝贝,http://plex.home.yulei.online:9999/udp/226.0.2.119:8864$山/西联通1+
 
 
@@ -1217,8 +1216,6 @@ WC重庆卫视,http://lede.medahl.com:10098/rtp/239.76.253.92:9000$长沙电信1
 湖N常德新闻,http://lede.medahl.com:10098/rtp/239.76.255.10:9000$长沙电信1+
 湖N郴州新闻,http://lede.medahl.com:10098/rtp/239.76.253.75:9000$长沙电信1+
 湖N道县综合,http://lede.medahl.com:10098/rtp/239.76.255.28:9000$长沙电信1+
-Y动漫秀场,http://lede.medahl.com:10098/rtp/239.76.253.124:9000$长沙电信1+
-Y动漫秀场,http://lede.medahl.com:10098/rtp/239.76.253.218:9000$长沙电信1+
 湖N桂东融媒,http://lede.medahl.com:10098/rtp/239.76.253.231:9000$长沙电信1+
 湖N衡阳公共,http://lede.medahl.com:10098/rtp/239.76.255.14:9000$长沙电信1+
 湖N衡阳县台,http://lede.medahl.com:10098/rtp/239.76.255.26:9000$长沙电信1+
@@ -1638,7 +1635,6 @@ Y嘉佳卡通,http://www.recker.cc:4022/rtp/239.77.0.179:5146$广/东电信6+
 广XK贺州新闻,http://dun.hitu.vip:8181/rtp/239.81.0.137:4056$广/西电信1+
 广XZ电竞1,http://dun.hitu.vip:8181/rtp/239.81.0.203:4056$广/西电信1+
 广XZ电竞2,http://dun.hitu.vip:8181/rtp/239.81.0.201:4056$广/西电信1+
-Y动漫秀场,http://dun.hitu.vip:8181/rtp/239.81.0.68:4056$广/西电信1+
 广XE都市剧场,http://dun.hitu.vip:8181/rtp/239.81.0.81:4056$广/西电信1+
 广XE法治天地,http://dun.hitu.vip:8181/rtp/239.81.0.79:4056$广/西电信1+
 广XYIPV7,http://dun.hitu.vip:8181/rtp/239.81.0.253:4056$广/西电信1+
@@ -1664,7 +1660,6 @@ Y动漫秀场,http://dun.hitu.vip:8181/rtp/239.81.0.68:4056$广/西电信1+
 广XK贺州新闻,http://www.dsmcloud.top:8888/rtp/239.81.0.137:4056$广/西电信2+
 广XZ电竞1,http://www.dsmcloud.top:8888/rtp/239.81.0.203:4056$广/西电信2+
 广XZ电竞2,http://www.dsmcloud.top:8888/rtp/239.81.0.201:4056$广/西电信2+
-Y动漫秀场,http://www.dsmcloud.top:8888/rtp/239.81.0.68:4056$广/西电信2+
 广XE都市剧场,http://www.dsmcloud.top:8888/rtp/239.81.0.81:4056$广/西电信2+
 广XE法治天地,http://www.dsmcloud.top:8888/rtp/239.81.0.79:4056$广/西电信2+
 广XYIPV7,http://www.dsmcloud.top:8888/rtp/239.81.0.253:4056$广/西电信2+
@@ -1733,14 +1728,12 @@ X纪实科教,http://oscam.picp.net:4020/rtp/239.21.1.172:5002$山/东电信2+
 WJ江苏卫视,http://oscam.picp.net:4020/rtp/239.21.1.89:5002$山/东电信2+
 WJ江西卫视,http://oscam.picp.net:4020/rtp/239.21.1.167:5002$山/东电信2+
 X金鹰纪实,http://oscam.picp.net:4020/rtp/239.21.1.170:5002$山/东电信2+
-Y金鹰卡通,http://oscam.picp.net:4020/rtp/239.21.1.48:5002$山/东电信2+
 WL辽宁卫视,http://oscam.picp.net:4020/rtp/239.21.1.164:5002$山/东电信2+
 内蒙古卫视,http://oscam.picp.net:4020/rtp/239.21.1.41:5002$山/东电信2+
 宁夏卫视,http://oscam.picp.net:4020/rtp/239.21.1.44:5002$山/东电信2+
 农林卫视,http://oscam.picp.net:4020/rtp/239.21.1.235:5002$山/东电信2+
 WQ青海卫视,http://oscam.picp.net:4020/rtp/239.21.1.43:5002$山/东电信2+
 WS山东卫视,http://oscam.picp.net:4020/rtp/239.21.1.87:5002$山/东电信2+
-WS山西卫视,http://oscam.picp.net:4020/rtp/239.21.1.33:5002$山/东电信2+
 WS深圳卫视,http://oscam.picp.net:4020/rtp/239.21.1.93:5002$山/东电信2+
 WS四川卫视,http://oscam.picp.net:4020/rtp/239.21.2.15:5002$山/东电信2+
 WS天津卫视,http://oscam.picp.net:4020/rtp/239.21.1.165:5002$山/东电信2+
