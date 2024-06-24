@@ -60,8 +60,8 @@ jobs:
           
       - name: Commit results
         run: |
-            git config --local user.email "296659440@qq.com"
-            git config --local user.name "pdj"
+            git config --local user.email "actions@github.com"
+            git config --local user.name "GitHub Action"
             if [ -n "$(git status --porcelain)" ]; then
             git add  *.txt #*.m3u
             git commit -m "Automatic update"
