@@ -24,7 +24,7 @@ with open("tv/itv.txt", 'r', encoding='utf-8') as file:
         if line:
             channel_name, channel_url = line.split(',')
                 
-            renhe_channels = ['http']
+            renhe_channels = ['电影', '剧场', '电视剧', '相声小品', 'CHC']
             # 检查频道名称是否不包含要排除的频道名称
             if any(excluded in channel_name for excluded in renhe_channels):
                 channels.append((channel_name, channel_url))
@@ -110,13 +110,13 @@ with open("tv/qita.txt", 'w', encoding='utf-8') as file:
     # 创建一个字典来存储每个频道的计数
     channel_counters = {}
     # 写入文件的开头部分
-    file.write('   \n')
+    file.write('其他频道,#genre#\n')
     # 遍历结果列表
     for result in results:
         # 解包结果元组
         channel_name, channel_url, speed = result
         # 创建一个列表来存储要排除的频道名称
-        excluded_channels = ['ALL-JOIN']
+        excluded_channels = ['CCTV', '卫视', '测试', 'CETV', '教育', '公共']
 
         # 检查频道名称是否不包含要排除的频道名称
         if not any(excluded in channel_name for excluded in excluded_channels):
