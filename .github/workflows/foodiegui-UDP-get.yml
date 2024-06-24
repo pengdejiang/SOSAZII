@@ -4,7 +4,7 @@ name: foodiegui-UDP-get  #这个是采集组播源
 on:
   workflow_dispatch:
   schedule:
-  - cron: '16 12,14,16,18,22,22,0,2,4,6 * * *'  #4-6-8-10-12-14-16-18-20-22&&&
+  - cron: '30 12,14,16,18,22,22,0,2,4,6 * * *'  #4-6-8-10-12-14-16-18-20-22&&&
 # 提交报错解决方案_加入写入权限
 permissions:
   contents: write
