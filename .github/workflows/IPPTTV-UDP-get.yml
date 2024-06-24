@@ -44,10 +44,12 @@ jobs:
       - name: 安装依赖7
         run: playwright install  
 
-
-      - name: 运行UDP源采集脚本
+      - name: 运行UDP源总的采集脚本
         run: |
           nohup python ${{ github.workspace }}/py/itv.py &
+          wait
+      - name: 运行UDP源总-测速-分类脚本
+        run: |
           nohup python ${{ github.workspace }}/py/cctv.py &
           nohup python ${{ github.workspace }}/py/weishi.py &
           nohup python ${{ github.workspace }}/py/qita.py &
