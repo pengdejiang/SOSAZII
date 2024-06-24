@@ -1,0 +1,61 @@
+name: speedtest-sosazi  #这个是测速sosazi
+
+
+on:
+  workflow_dispatch:
+  schedule:
+  - cron: '11 12,14,16,18,22,22,0,2,4,6 * * *'  #4-6-8-10-12-14-16-18-20&&&
+# 提交报错解决方案_加入写入权限
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    #runs-on: ubuntu-22.04@20240422.1.0
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+    
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12.3'
+
+      - name: Install dependencies
+        run: pip install selenium==4.19.0 requests==2.31.0 futures==3.0.5 eventlet==0.36.1
+
+      - name: 安装依赖
+        run: sudo apt-get install python3-dev     
+
+      - name: 安装依赖
+        run: pip install selenium requests futures eventlet
+
+      - name: 安装依赖1
+        run: pip install beautifulsoup4
+      - name: 安装依赖2
+        run: pip install playwright        
+      - name: 安装依赖3
+        run: pip install github3.py        
+      - name: 安装依赖5
+        run: pip install --upgrade pip
+      - name: 安装依赖6
+        run: pip install --no-cache-dir aiohttp  
+      - name: 安装依赖7
+        run: playwright install  
+
+      - name: 运行UDP源总的采集脚本
+        run: |
+          nohup python ${{ github.workspace }}/ZUZU-PY/test-speed.py
+
+      - name: Commit results
+        run: |
+            git config --local user.email "actions@github.com"
+            git config --local user.name "GitHub Action"
+            if [ -n "$(git status --porcelain)" ]; then
+            git add  *.txt #*.m3u
+            git commit -m "Automatic update"
+            git push
+            else
+              echo "No changes detected, skipping commit."
+            fi
