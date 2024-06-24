@@ -46,7 +46,6 @@ jobs:
 
 
       - name: 运行UDP源采集脚本
-- name: 运行直播源采集脚本
         run: |
           nohup python ${{ github.workspace }}/py/itv.py &
           nohup python ${{ github.workspace }}/py/cctv.py &
