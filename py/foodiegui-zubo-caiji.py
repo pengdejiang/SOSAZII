@@ -317,7 +317,7 @@ def classify_and_sort_sources(speed_test_results):
     def classify_sources(sources, categories):  
         classified = defaultdict(list)  
         for name, url, speed in sources:  
-            if float(speed) > 0.1: 
+            if float(speed) > 0.7: 
                 found = False  
                 for category, channel_list in categories.items():  
                     for channel in channel_list:  
