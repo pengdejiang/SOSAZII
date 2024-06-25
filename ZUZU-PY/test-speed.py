@@ -17,7 +17,7 @@ results = []
 channels = []
 error_channels = []
 
-with open("SOSAZI-VERYGOOD.txt", 'r', encoding='utf-8') as file:
+with open("四川电信.txt", 'r', encoding='utf-8') as file:
     lines = file.readlines()
     for line in lines:
         line = line.strip()
@@ -106,9 +106,9 @@ result_counter = 8  # 每个频道需要的个数
 
 
 
-with open("sosazi-SPEED-test.txt", 'w', encoding='utf-8') as file:
+with open("四川电信测速后.txt", 'w', encoding='utf-8') as file:
     channel_counters = {}
-    file.write('test-speed-delete\n')
+    file.write('删除慢IP输出结果\n')
     for result in results:
         channel_name, channel_url, speed = result
         if 'http' in channel_url: 
