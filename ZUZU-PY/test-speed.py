@@ -22,10 +22,9 @@ with open("四川电信.txt", 'r', encoding='utf-8') as file:
     for line in lines:
         line = line.strip()
         if line:
-            channel_name, channel_url = line.split(',')
-            result = some_function_returning_single_value()         # 使用单个变量接收函数返回的值            
+            channel_name, channel_url = line.split(',http')          
             import re
-            if ',' in channel_url:   # 提取所有,链接的行
+            if ',http' in channel_url:   # 提取所有,链接的行
                 channels.append((channel_name, channel_url))
 
 # 定义工作线程函数
@@ -112,7 +111,7 @@ with open("四川电信测速后.txt", 'w', encoding='utf-8') as file:
     file.write('删除慢IP输出结果\n')
     for result in results:
         channel_name, channel_url, speed = result
-        if 'http' in channel_url: 
+        if ',http' in channel_url: 
             if channel_url in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
