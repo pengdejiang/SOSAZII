@@ -1,4 +1,17 @@
 # download_speed_test.py
+import threading
+from queue import Queue
+import time
+import random
+from bs4 import BeautifulSoup
+import re
+from playwright.sync_api import sync_playwright
+import requests
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from collections import defaultdict
+from datetime import datetime
+import socket
+import os
 import requests
 import time
 
@@ -72,3 +85,7 @@ if __name__ == "__main__":
             result = test_channel_speed(line)
             if result is not None:
                 output_file.write(result)
+				
+				
+				
+				
