@@ -24,10 +24,26 @@ def test_channel_speed(line):
     channel_ip_A = line.split(',')[1].split('/rtp')[0].strip()
     channel_ip_B = line.split(',')[1].split('/udp')[0].strip()
     
+    # 创建两个集合来存储已经测试过的channel_ip_A和channel_ip_B
+    tested_ips_A = set()
+    tested_ips_B = set()
+    
     # 检查channel_ip_A和channel_ip_B是否已经测试过
     if channel_ip_A not in tested_ips_A and channel_ip_B not in tested_ips_B:
         # 测速
-        speed = measure_speed(channel_url)
+        for _ in range(3):
+            speed = measure_speed(channel_url)
+            if speed is not None and speed <= timeout:
+                # 下载成功，跳出循环
+                break
+            else:
+                # 下载失败，继续下一次循环
+                continue
+        else:
+            # 三次尝试都失败，标记该channel超时
+            print(f"标记超时：{channel_name}")
+            return None
+        
         # 将channel_ip_A和channel_ip_B添加到已测试集合中
         tested_ips_A.add(channel_ip_A)
         tested_ips_B.add(channel_ip_B)
@@ -35,7 +51,7 @@ def test_channel_speed(line):
         # 判断速度并返回结果
         if speed is not None and speed <= timeout:
             return line
-        elif speed is not None and speed > timeout:
+        else:
             print(f"删除行：{line.strip()}，速度 {speed:.2f} 秒")
             return None
     else:
@@ -48,10 +64,6 @@ if __name__ == "__main__":
     # 打开并读取“四川电信.txt”文件
     with open("四川电信.txt", "r", encoding="utf-8") as file:
         lines = file.readlines()
-    
-    # 创建两个集合来存储已经测试过的channel_ip_A和channel_ip_B
-    tested_ips_A = set()
-    tested_ips_B = set()
     
     # 打开“四川测速结果.txt”文件，准备写入结果
     with open("四川测速结果.txt", "w", encoding="utf-8") as output_file:
