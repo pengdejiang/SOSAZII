@@ -2,12 +2,15 @@ import requests
 import time
 
 # 定义测速函数
-def measure_speed(url):
+def measure_speed(url, max_size=2*1024*1024, timeout=5):
     try:
         start_time = time.time()
-        response = requests.get(url, timeout=5)
+        response = requests.get(url, stream=True, timeout=timeout)
         end_time = time.time()
         response.raise_for_status()
+        
+        # 限制下载大小为2MB
+        content = response.content[:max_size]
         connection_time = end_time - start_time
         return connection_time
     except requests.exceptions.RequestException as e:
@@ -43,9 +46,9 @@ with open("四川测速结果.txt", "w", encoding="utf-8") as output_file:
             tested_ips_B.add(channel_ip_B)
             
             # 判断速度并写入文件
-            if speed is not None and speed > 0.2:
+            if speed is not None and speed <= timeout:
                 output_file.write(line)
-            elif speed is not None and speed <= 0.2:
+            elif speed is not None and speed > timeout:
                 print(f"删除行：{line.strip()}，速度 {speed:.2f} 秒")
         else:
             # 如果channel_ip_A或channel_ip_B已经测试过，则跳过测速
