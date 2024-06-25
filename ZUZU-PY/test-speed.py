@@ -24,7 +24,7 @@ with open("四川电信.txt", 'r', encoding='utf-8') as file:
         if line:
             channel_name, channel_url = line.split(',')
             import re
-            if 'http' in channel_url:   # 提取所有http链接的行
+            if ',' in channel_url:   # 提取所有,链接的行
                 channels.append((channel_name, channel_url))
 
 # 定义工作线程函数
@@ -100,7 +100,7 @@ results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
 results.sort(key=lambda x: channel_key(x[0]))
 now_today = datetime.date.today()
 
-result_counter = 8  # 每个频道需要的个数
+result_counter = 3 # 每个频道需要的个数
 
 
 
