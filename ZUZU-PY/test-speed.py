@@ -20,7 +20,7 @@ error_channels = []
 with open("四川电信.txt", 'r', encoding='utf-8') as file:
     lines = file.readlines()
     for line in lines:
-       if re.search(pattern, line) and line.count(',') == 1:  # 如果行中有任意关键字而且行内只有一个逗号
+       if line.count(',') == 1:  # 如果行中只有一个逗号
          line = line.strip()
          if line:
              channel_name, channel_url = line.split(',')          
