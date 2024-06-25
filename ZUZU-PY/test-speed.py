@@ -16,15 +16,19 @@ results = []
 
 channels = []
 error_channels = []
-
 with open("四川电信.txt", 'r', encoding='utf-8') as file:
     lines = file.readlines()
     for line in lines:
         line = line.strip()
         if line:
-            channel_name, channel_url = line.split(',')
-            if 'S川' in channel_name:
-                channels.append((channel_name, channel_url))
+            # 使用正则表达式来匹配通道名称和URL
+            match = re.match(r'([^,]+),\s*(https?://[^,]+)', line)
+            if match:
+                channel_name, channel_url = match.groups()
+                if 'S川' in channel_name:
+                    channels.append((channel_name, channel_url))
+            else:
+                print(f"无法解析行: {line}")
 
 # 定义工作线程函数
 def worker():
