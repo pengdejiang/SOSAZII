@@ -15,11 +15,11 @@ def measure_speed(url):
         return None
 
 # 打开并读取“四川电信”文件
-with open("四川电信", "r", encoding="utf-8") as file:
+with open("四川电信.txt", "r", encoding="utf-8") as file:
     lines = file.readlines()
 
 # 打开“四川测速结果”文件，准备写入结果
-with open("四川测速结果", "w", encoding="utf-8") as output_file:
+with open("四川测速结果.txt", "w", encoding="utf-8") as output_file:
     # 遍历每一行
     for line in lines:
         # 截取channel_name和channel_url
