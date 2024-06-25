@@ -23,6 +23,7 @@ with open("四川电信.txt", 'r', encoding='utf-8') as file:
         line = line.strip()
         if line:
             channel_name, channel_url = line.split(',')
+            result = some_function_returning_single_value()         # 使用单个变量接收函数返回的值            
             import re
             if ',' in channel_url:   # 提取所有,链接的行
                 channels.append((channel_name, channel_url))
