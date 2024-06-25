@@ -23,7 +23,7 @@ with open("四川电信.txt", 'r', encoding='utf-8') as file:
         line = line.strip()
         if line:
             channel_name, channel_url = line.split(',')
-            if '四川' in channel_name:
+            if 'S川' in channel_name:
                 channels.append((channel_name, channel_url))
 
 # 定义工作线程函数
@@ -110,7 +110,7 @@ with open("四川电信测速后.txt", 'w', encoding='utf-8') as file:
     file.write('四川频道,,,#genre#\n')
     for result in results:
         channel_name, channel_url, speed = result
-        if '四川' in channel_name: 
+        if 'S川' in channel_name: 
             if channel_name in channel_counters:
                 if channel_counters[channel_name] >= result_counter:
                     continue
