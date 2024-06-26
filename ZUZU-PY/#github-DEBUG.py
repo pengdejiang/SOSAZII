@@ -69,27 +69,26 @@ for line in fileinput.input("AIP记录存档.txt", inplace=True):  #打开文件
 
     print(line, end="")  #设置end=""，避免输出多余的换行符 
 
-#去重复
-﻿# 打开文档并读取所有行 
+#去重复_打开文档并读取所有行 
 with open('AIP记录存档.txt', 'r', encoding="utf-8") as file:
  lines = file.readlines()
  
-# 使用列表来存储唯一的行的顺序 
+#使用列表来存储唯一的行的顺序 
  unique_lines = [] 
  seen_lines = set() 
 
-# 遍历每一行，如果是新的就加入unique_lines 
+#遍历每一行，如果是新的就加入unique_lines 
 for line in lines:
  if line not in seen_lines:
   unique_lines.append(line)
   seen_lines.add(line)
 
-# 将唯一的行写入新的文档 
+#将唯一的行写入新的文档 
 with open('IP_old_save.txt', 'w', encoding="utf-8") as file:
  file.writelines(unique_lines)
 
 #############################################################################split##
-# 合并自定义频道文件#################################################################################################
+#合并自定义频道文件#################################################################################################
 
 file_contents = []   #这里含义是打开当前目录下以下文件清单--必须要保证有文件--否则报错
 
