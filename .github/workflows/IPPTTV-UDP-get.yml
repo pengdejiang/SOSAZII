@@ -4,7 +4,7 @@ name: IPPTTV-UDP-get  #这个是采集组播源
 on:
   workflow_dispatch:
   schedule:
-  - cron: '11 9 * * *'  # &&
+  - cron: '1 */12 * * *'        #这里更改自动运行的时间，没这两行的话只能手动运行
 # 提交报错解决方案_加入写入权限
 permissions:
   contents: write
