@@ -2468,7 +2468,7 @@ for line in lines:
   seen_lines.add(line)
 
 #将唯一的行写入新的文档 
-with open('SOSAZI-VERYGOOD1.txt', 'w', encoding="utf-8") as file:
+with open('SOSAZI-VERYGOOD.txt', 'w', encoding="utf-8") as file:
  file.writelines(unique_lines)
 
 #结束去重复
