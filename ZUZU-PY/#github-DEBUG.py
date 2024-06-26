@@ -57,7 +57,7 @@ pattern = '|'.join(keywords)  # 创建正则表达式模式，匹配任意一个
 
 #pattern = r"^(.*?),(?!#genre#)(.*?)$" #以分类直接复制
 
-with open('合并IP.txt', 'r', encoding='utf-8') as file, open('AIP记录存档.txt', 'a', encoding='utf-8') as file:    #####定义临时文件名
+with open('合并IP.txt', 'r', encoding='utf-8') as file, open('AIP记录存档.txt', 'a', encoding='utf-8') as AIP记录存档:    #####定义临时文件名
 
     for line in file:
 
