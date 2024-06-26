@@ -143,6 +143,31 @@ with open('IP_old_save.txt', 'r', encoding="utf-8") as input_file, open('IP_save
 
 #############################################################################split##
 #合并自定义频道文件#################################################################################################
+import time
+
+import concurrent.futures
+
+from selenium import webdriver
+
+from selenium.webdriver.chrome.options import Options
+
+import requests
+
+import re
+
+import os
+
+import threading
+
+from queue import Queue
+
+from datetime import datetime
+
+import replace
+
+import fileinput
+
+#重新载入一遍运行环境##############################################################
 
 file_contents = []   #这里含义是打开当前目录下以下文件清单--必须要保证有文件--否则报错
 
