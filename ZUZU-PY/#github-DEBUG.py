@@ -49,7 +49,7 @@ with open("合并IP.txt", "w", encoding="utf-8") as output:
 #结束第一步合并#####################################################################################################################
 
 #开始#########################
-#从整理好的文本中按类别进行特定关键词提取#############################################################################################
+#从整理好的文本中按类别进行特定关键词提取
 
 keywords = ['S川A爱科幻','天JD都市高清','安HF人物','山DB农科','山XD都市剧场','广DA经济科教','广XH南宁都市','江S南京生活','江XB都市剧场','河BA农民高清','河N民生频道','河NC电视剧频道','浙JC教育高清','湖N常德新闻','福JA少儿','辽LD沈阳新闻','重QD影视频道','陕XA新闻资讯']  # 需要提取的关键字列表
 
@@ -68,8 +68,11 @@ with open('合并IP.txt', 'r', encoding='utf-8') as file, open('AIP记录存档.
 for line in fileinput.input("AIP记录存档.txt", inplace=True):  #打开文件，并对其进行关键词原地替换    
 
     print(line, end="")  #设置end=""，避免输出多余的换行符 
+#结束提取写入########################################################
 
-#去重复_打开文档并读取所有行 
+
+#开始去重复_打开文档并读取所有行############################################
+
 with open('AIP记录存档.txt', 'r', encoding="utf-8") as file:
  lines = file.readlines()
  
@@ -86,6 +89,58 @@ for line in lines:
 #将唯一的行写入新的文档 
 with open('IP_old_save.txt', 'w', encoding="utf-8") as file:
  file.writelines(unique_lines)
+#结束去重复########################################################
+
+#开始排序IP记录将相同频道放到一起########################################################
+
+#载入环境
+import re
+
+# A版本--自定义排序键函数 固定域名--在前
+def custom_sort_key(item):
+    channel, url = item.split(',')
+
+    channel_letters = ''.join(filter(str.isalpha, channel))
+    channel_numbers = ''.join(filter(str.isdigit, channel))
+
+    if channel_numbers.isdigit():
+        channel_sort_key = (channel_letters, int(channel_numbers))
+    else:
+        channel_sort_key = (channel_letters, 0)
+
+    sort_key = re.search(r"http://(.*?)\.", url)
+    if sort_key:
+        sort_key = sort_key.group(1)
+    else:
+        sort_key = url
+
+    # 检查sort_key是否为数字
+    if sort_key[0].isalpha():
+        sort_key = (0, sort_key)  # 字母开头的sort_key排在最前面
+    elif sort_key.isdigit():
+        sort_key = (1, int(sort_key))  # 数字从小到大排序
+    else:
+        sort_key = (2, sort_key)
+
+    return (channel_sort_key, sort_key)
+
+with open('IP_old_save.txt', 'r', encoding="utf-8") as input_file, open('IP_save.txt', 'a', encoding="utf-8") as output_file:
+    # 读取所有行并存储在列表中
+    lines = input_file.readlines()
+
+    # 过滤掉空白行
+    lines = [line.strip() for line in lines if line.strip()]
+    
+    sorted_data = sorted(lines, key=custom_sort_key)
+
+    # 将排序后的数据写入输出文件
+    for channels in sorted_data: 
+        output_file.write(f"{channels}\n")
+    sorted_data = sorted(lines, key=custom_sort_key)
+
+   #结束########################################################
+
+
 
 #############################################################################split##
 #合并自定义频道文件#################################################################################################
@@ -2398,6 +2453,8 @@ with open('SOSAZI-VERYGOOD.txt', 'w', encoding="utf-8") as file:
 os.remove("合并IP.txt")
 
 os.remove("AIP记录存档.txt")
+
+os.remove("IP_old_save.txt")
 
 os.remove("合并.txt")
 
