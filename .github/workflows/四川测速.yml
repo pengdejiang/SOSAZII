@@ -4,7 +4,7 @@ name: 四川测速  #这个是四川测速
 on:
   workflow_dispatch:
   schedule:
-  - cron: ' * * *'  #4&&&
+  - cron: '1 */12 * * *'        #这里更改自动运行的时间，没这两行的话只能手动运行
 # 提交报错解决方案_加入写入权限
 permissions:
   contents: write
