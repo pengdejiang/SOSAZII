@@ -116,8 +116,8 @@ for keyword in keywords:
                     
             if valid_ips:
                 #生成节目列表 省份运营商.txt
-                rtp_filename = f'rtp-city/{province}_{isp}.txt'
-                with open(rtp_filename, 'r', encoding='utf-8') as file:
+                rtp-city_filename = f'rtp-city/{province}_{isp}.txt'
+                with open(rtp-city_filename, 'r', encoding='utf-8') as file:
                     data = file.read()
                 txt_filename = f'{province}{isp}.txt'
                 with open(txt_filename, 'w') as new_file:
