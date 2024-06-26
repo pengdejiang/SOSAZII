@@ -68,6 +68,26 @@ with open('合并IP.txt', 'r', encoding='utf-8') as file, open('AIP记录存档.
 for line in fileinput.input("AIP记录存档.txt", inplace=True):  #打开文件，并对其进行关键词原地替换    
 
     print(line, end="")  #设置end=""，避免输出多余的换行符 
+
+#去重复
+﻿# 打开文档并读取所有行 
+with open('AIP记录存档.txt', 'r', encoding="utf-8") as file:
+ lines = file.readlines()
+ 
+# 使用列表来存储唯一的行的顺序 
+ unique_lines = [] 
+ seen_lines = set() 
+
+# 遍历每一行，如果是新的就加入unique_lines 
+for line in lines:
+ if line not in seen_lines:
+  unique_lines.append(line)
+  seen_lines.add(line)
+
+# 将唯一的行写入新的文档 
+with open('IP_old_save.txt', 'w', encoding="utf-8") as file:
+ file.writelines(unique_lines)
+
 #############################################################################split##
 # 合并自定义频道文件#################################################################################################
 
@@ -2377,6 +2397,8 @@ with open('SOSAZI-VERYGOOD.txt', 'w', encoding="utf-8") as file:
 #删除所有临时文件--删除清单在下面列出
 
 os.remove("合并IP.txt")
+
+os.remove("AIP记录存档.txt")
 
 os.remove("合并.txt")
 
