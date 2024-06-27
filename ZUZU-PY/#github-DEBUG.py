@@ -1,17 +1,20 @@
-# 导入需要的库
 import time
+from datetime import datetime, timedelta
 
-# 获取当前时间
-current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+# 获取当前北京时间，由于搜索结果可能会有些许延迟，我们可以直接使用内置的datetime库来获取准确时间
+current_time = datetime.now()
+# 计算当前时间+8小时
+future_time = current_time + timedelta(hours=8)
+# 格式化时间字符串
+formatted_future_time = future_time.strftime("%Y-%m-%d %H:%M:%S")
 
-# 打开文件，以追加模式写入空白五行和当前时间
-with open('IP_save.txt', 'a') as file:
-    file.write('\n' * 5)  # 写入空白五行
-    file.write(current_time + '\n')  # 写入当前时间
-    file.write('\n')  # 写入空白一行
+# 打开文件，以追加模式写入空白五行、计算后的时间和空白一行
+with open('IP_save.txt', 'a', encoding='utf-8') as file:
+    file.write('\n' * 2)  # 写入空白2行
+    file.write(formatted_future_time + '\n')  # 写入计算后的时间
+    file.write('\n')  # 写入空白1行
 
-print("日期时间记录")
-
+print("文件操作已完成，已将当前时间+8小时的时间写入到'IP_save.txt'文件中。")
 #############################################################################split##
 import time
 
