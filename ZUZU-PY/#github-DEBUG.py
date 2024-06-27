@@ -1,13 +1,3 @@
-#开始
-#对IP记录文件开始部分写入当前时间
-#打开一个文件以写入数据（如果文件不存在，它将被创建）
-with open('IP_save.txt', 'a', encoding="utf-8") as file:
-#写入当前日期和时间到文件
-    file.write(current_datetime)
-    # 写入五个空白行
-    for _ in range(5):
-        file.write('\n')
-#导入datetime模块
 import datetime
 #获取当前日期和时间
 now = datetime.datetime.now()
@@ -17,11 +7,17 @@ current_datetime = now.strftime("%Y-%m-%d %H:%M:%S")
 
 #打开一个文件以写入数据（如果文件不存在，它将被创建）
 with open('IP_save.txt', 'a', encoding="utf-8") as file:
-#写入当前日期和时间到文件
-    file.write(current_datetime)
-    # 写入五个空白行
-    for _ in range(2):
+# 写入五行空白行
+    for _ in range(5):
         file.write('\n')
+    
+    # 写入当前时间
+    file.write(current_time + '\n')
+    
+    # 写入一行空白行
+    file.write('\n')
+
+print("当前时间已写入文件'output.txt'，并在前后分别添加了五行和一行空白行。")
 #结束日期时间写入##
 #############################################################################split##
 import time
