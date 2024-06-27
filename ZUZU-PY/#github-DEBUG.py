@@ -1,24 +1,17 @@
-import datetime
-#获取当前日期和时间
-now = datetime.datetime.now()
+# 导入需要的库
+import time
 
-#将日期和时间格式化为字符串
-current_datetime = now.strftime("%Y-%m-%d %H:%M:%S")
+# 获取当前时间
+current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
-#打开一个文件以写入数据（如果文件不存在，它将被创建）
-with open('IP_save.txt', 'a', encoding="utf-8") as file:
-# 写入五行空白行
-    for _ in range(5):
-        file.write('\n')
-    
-    # 写入当前时间
-    file.write(current_time + '\n')
-    
-    # 写入一行空白行
-    file.write('\n')
+# 打开文件，以追加模式写入空白五行和当前时间
+with open('IP_save.txt', 'a') as file:
+    file.write('\n' * 5)  # 写入空白五行
+    file.write(current_time + '\n')  # 写入当前时间
+    file.write('\n')  # 写入空白一行
 
-print("当前时间已写入文件'output.txt'，并在前后分别添加了五行和一行空白行。")
-#结束日期时间写入##
+print("日期时间记录")
+
 #############################################################################split##
 import time
 
