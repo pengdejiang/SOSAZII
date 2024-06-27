@@ -13,7 +13,9 @@ current_datetime = now.strftime("%Y-%m-%d %H:%M:%S")
 with open('IP_save.txt', 'a', encoding="utf-8") as file:
 #写入当前日期和时间到文件
     file.write(current_datetime)
-	file.write('\n')  #写入空白行 一行##
+    # 写入五个空白行
+    for _ in range(5):
+        file.write('\n')
 #结束日期时间写入##
 #############################################################################split##
 import time
