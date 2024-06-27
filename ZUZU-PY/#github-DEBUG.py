@@ -46,7 +46,7 @@ import fileinput
 
 file_contents = []   #这里含义是打开当前目录下以下文件清单--必须要保证有文件--否则报错
 
-file_paths = ["天津联通.txt", "山西联通.txt","安徽电信.txt", "河南联通.txt", "河南电信.txt", "福建电信.txt", "江苏电信.txt", "贵州电信.txt", "四川电信.txt", "重庆联通.txt", "重庆电信.txt","山东电信.txt","广东电信.txt","广西电信.txt","江西电信.txt","河北电信.txt","浙江电信.txt","湖南电信.txt","辽宁联通.txt","陕西电信.txt"]  #替换为实际的文件路径列表
+file_paths = ["天津联通.txt", "山西联通.txt","安徽电信.txt", "河南联通.txt", "河南电信.txt", "福建电信.txt", "江苏电信.txt", "贵州电信.txt", "四川电信.txt", "重庆联通.txt", "重庆电信.txt","山东电信.txt","广东电信.txt","广西电信.txt","江西电信.txt","河北电信.txt","浙江电信.txt","湖北电信.txt","湖南电信.txt","辽宁联通.txt","陕西电信.txt"]  #替换为实际的文件路径列表
 
 for file_path in file_paths:
 
@@ -190,7 +190,7 @@ import fileinput
 
 file_contents = []   #这里含义是打开当前目录下以下文件清单--必须要保证有文件--否则报错
 
-file_paths = ["天津联通.txt", "山西联通.txt","安徽电信.txt", "河南联通.txt", "河南电信.txt", "福建电信.txt", "江苏电信.txt", "贵州电信.txt", "四川电信.txt", "重庆联通.txt", "重庆电信.txt","山东电信.txt","广东电信.txt","广西电信.txt","江西电信.txt","河北电信.txt","浙江电信.txt","湖南电信.txt","辽宁联通.txt","陕西电信.txt","JIEXI.txt"]  #替换为实际的文件路径列表
+file_paths = ["天津联通.txt", "山西联通.txt","安徽电信.txt", "河南联通.txt", "河南电信.txt", "福建电信.txt", "江苏电信.txt", "贵州电信.txt", "四川电信.txt", "重庆联通.txt", "重庆电信.txt","山东电信.txt","广东电信.txt","广西电信.txt","江西电信.txt","河北电信.txt","浙江电信.txt","湖北电信.txt","湖南电信.txt","辽宁联通.txt","陕西电信.txt","JIEXI.txt"]  #替换为实际的文件路径列表
 
 for file_path in file_paths:
 
