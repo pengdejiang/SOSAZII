@@ -2441,8 +2441,6 @@ os.remove("合并IP.txt")
 
 os.remove("AIP记录存档.txt")
 
-os.remove("IP_old_save.txt")
-
 os.remove("合并.txt")
 
 os.remove("排序.txt")
