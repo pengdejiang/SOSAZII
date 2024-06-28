@@ -119,28 +119,28 @@ WC重庆卫视,http://ngwy.9966.org:8888/rtp/239.3.1.122:8160$北京联通0+
 
 
 
-CETV1,http://plex.home.yulei.online:9999/udp/226.0.2.181:9360$山/西联通1+
-CETV5,http://plex.home.yulei.online:9999/udp/226.0.2.99:8704$山/西联通1+
+CETV1,http://plex.home.yulei.online:9999/rtp/226.0.2.181:9360$山/西联通1+
+CETV5,http://plex.home.yulei.online:9999/rtp/226.0.2.99:8704$山/西联通1+
 
-CETV1,http://ds920.dsmynas.net:5555/udp/226.0.2.181:9360$山/西联通2+
-CETV5,http://ds920.dsmynas.net:5555/udp/226.0.2.99:8704$山/西联通2+
-
-
-IV凤凰卫视中文台,http://asl.x3322.net:8888/udp/239.93.0.162:2192$四/川联通1+
-IV凤凰卫视资讯台,http://asl.x3322.net:8888/udp/239.93.0.118:2191$四/川联通1+
-
-IV凤凰卫视中文台,http://lede.medahl.com:10098/udp/239.76.253.134:9000$长沙电信1+
-IV凤凰卫视资讯台,http://lede.medahl.com:10098/udp/239.76.253.135:9000$长沙电信1+
+CETV1,http://ds920.dsmynas.net:5555/rtp/226.0.2.181:9360$山/西联通2+
+CETV5,http://ds920.dsmynas.net:5555/rtp/226.0.2.99:8704$山/西联通2+
 
 
+IV凤凰卫视中文台,http://asl.x3322.net:8888/rtp/239.93.0.162:2192$四/川联通1+
+IV凤凰卫视资讯台,http://asl.x3322.net:8888/rtp/239.93.0.118:2191$四/川联通1+
 
-CHC高清电影,http://plex.home.yulei.online:9999/udp/226.0.2.93:8004$山/西联通1+
-CHC动作电影,http://plex.home.yulei.online:9999/udp/226.0.2.94:8012$山/西联通1+
-CHC家庭影院,http://plex.home.yulei.online:9999/udp/226.0.2.240:9820$山/西联通1+
+IV凤凰卫视中文台,http://lede.medahl.com:10098/rtp/239.76.253.134:9000$长沙电信1+
+IV凤凰卫视资讯台,http://lede.medahl.com:10098/rtp/239.76.253.135:9000$长沙电信1+
 
-CHC高清电影,http://ds920.dsmynas.net:5555/udp/226.0.2.93:8004$山/西联通2+
-CHC动作电影,http://ds920.dsmynas.net:5555/udp/226.0.2.94:8012$山/西联通2+
-CHC家庭影院,http://ds920.dsmynas.net:5555/udp/226.0.2.240:9820$山/西联通2+
+
+
+CHC高清电影,http://plex.home.yulei.online:9999/rtp/226.0.2.93:8004$山/西联通1+
+CHC动作电影,http://plex.home.yulei.online:9999/rtp/226.0.2.94:8012$山/西联通1+
+CHC家庭影院,http://plex.home.yulei.online:9999/rtp/226.0.2.240:9820$山/西联通1+
+
+CHC高清电影,http://ds920.dsmynas.net:5555/rtp/226.0.2.93:8004$山/西联通2+
+CHC动作电影,http://ds920.dsmynas.net:5555/rtp/226.0.2.94:8012$山/西联通2+
+CHC家庭影院,http://ds920.dsmynas.net:5555/rtp/226.0.2.240:9820$山/西联通2+
 
 CHC家庭影院,http://huihaojie.cn:8888/rtp/235.254.199.246:7980$重/庆电信2+
 CHC动作电影,http://huihaojie.cn:8888/rtp/235.254.199.247:7980$重/庆电信2+
@@ -219,36 +219,36 @@ WY上虞卫视,https://l.cztvcloud.com/channels/lantian/SXshangyu3/720p.m3u8
 浙JE法制天地,http://www.wzxiejian.top:9999/rtp/233.50.201.191:5140$浙/江电信2+
 
 
-WA安徽卫视,http://plex.home.yulei.online:9999/udp/226.0.2.145:9072$山/西联通1+
-WB北京卫视,http://plex.home.yulei.online:9999/udp/226.0.2.177:9328$山/西联通1+
-WD东方卫视,http://plex.home.yulei.online:9999/udp/226.0.2.175:9312$山/西联通1+
-WD东南卫视,http://plex.home.yulei.online:9999/udp/226.0.2.188:9416$山/西联通1+
-WG广东卫视,http://plex.home.yulei.online:9999/udp/226.0.2.146:9080$山/西联通1+
-WG广西卫视,http://plex.home.yulei.online:9999/udp/226.0.2.231:9760$山/西联通1+
-WG贵州卫视,http://plex.home.yulei.online:9999/udp/226.0.2.180:9352$山/西联通1+
-WH海南卫视,http://plex.home.yulei.online:9999/udp/226.0.2.212:9608$山/西联通1+
-WH河北卫视,http://plex.home.yulei.online:9999/udp/226.0.2.178:9336$山/西联通1+
-WH河南卫视,http://plex.home.yulei.online:9999/udp/226.0.2.52:8328$山/西联通1+
-WH黑龙江卫视,http://plex.home.yulei.online:9999/udp/226.0.2.151:9120$山/西联通1+
-WH湖北卫视,http://plex.home.yulei.online:9999/udp/226.0.2.150:9112$山/西联通1+
-WH湖南卫视,http://plex.home.yulei.online:9999/udp/226.0.2.143:9056$山/西联通1+
-WJ江苏卫视,http://plex.home.yulei.online:9999/udp/226.0.2.176:9320$山/西联通1+
-WJ江西卫视,http://plex.home.yulei.online:9999/udp/226.0.2.54:8344$山/西联通1+
-WL辽宁卫视,http://plex.home.yulei.online:9999/udp/226.0.2.173:9296$山/西联通1+
-WS山东卫视,http://plex.home.yulei.online:9999/udp/226.0.2.149:9104$山/西联通1+
-WS山西卫视,http://plex.home.yulei.online:9999/udp/226.0.2.152:9128$山/西联通1+
-WS深圳卫视,http://plex.home.yulei.online:9999/udp/226.0.2.147:9088$山/西联通1+
-WS四川卫视,http://plex.home.yulei.online:9999/udp/226.0.2.179:9344$山/西联通1+
-WT天津卫视,http://plex.home.yulei.online:9999/udp/226.0.2.148:9096$山/西联通1+
-WZ浙江卫视,http://plex.home.yulei.online:9999/udp/226.0.2.144:9064$山/西联通1+
-WC重庆卫视,http://plex.home.yulei.online:9999/udp/226.0.2.174:9304$山/西联通1+
-X纪实人文,http://plex.home.yulei.online:9999/udp/226.0.2.193:9456$山/西联通1+
+WA安徽卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.145:9072$山/西联通1+
+WB北京卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.177:9328$山/西联通1+
+WD东方卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.175:9312$山/西联通1+
+WD东南卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.188:9416$山/西联通1+
+WG广东卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.146:9080$山/西联通1+
+WG广西卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.231:9760$山/西联通1+
+WG贵州卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.180:9352$山/西联通1+
+WH海南卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.212:9608$山/西联通1+
+WH河北卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.178:9336$山/西联通1+
+WH河南卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.52:8328$山/西联通1+
+WH黑龙江卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.151:9120$山/西联通1+
+WH湖北卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.150:9112$山/西联通1+
+WH湖南卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.143:9056$山/西联通1+
+WJ江苏卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.176:9320$山/西联通1+
+WJ江西卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.54:8344$山/西联通1+
+WL辽宁卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.173:9296$山/西联通1+
+WS山东卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.149:9104$山/西联通1+
+WS山西卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.152:9128$山/西联通1+
+WS深圳卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.147:9088$山/西联通1+
+WS四川卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.179:9344$山/西联通1+
+WT天津卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.148:9096$山/西联通1+
+WZ浙江卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.144:9064$山/西联通1+
+WC重庆卫视,http://plex.home.yulei.online:9999/rtp/226.0.2.174:9304$山/西联通1+
+X纪实人文,http://plex.home.yulei.online:9999/rtp/226.0.2.193:9456$山/西联通1+
 X乐游频道,http://plex.home.yulei.online:9999/rtp/226.0.2.77:8528$山/西联通1+
-X金鹰纪实,http://plex.home.yulei.online:9999/udp/226.0.2.194:9464$山/西联通1+
-Y金鹰卡通,http://plex.home.yulei.online:9999/udp/226.0.2.172:9288$山/西联通1+
+X金鹰纪实,http://plex.home.yulei.online:9999/rtp/226.0.2.194:9464$山/西联通1+
+Y金鹰卡通,http://plex.home.yulei.online:9999/rtp/226.0.2.172:9288$山/西联通1+
 Y动漫秀场,http://plex.home.yulei.online:9999/rtp/226.0.2.183:9376$山/西联通1+
 Y金色学堂,http://plex.home.yulei.online:9999/rtp/226.0.2.182:9368$山/西联通1+
-Y优优宝贝,http://plex.home.yulei.online:9999/udp/226.0.2.119:8864$山/西联通1+
+Y优优宝贝,http://plex.home.yulei.online:9999/rtp/226.0.2.119:8864$山/西联通1+
 
 
 
@@ -2193,7 +2193,7 @@ GAT-未来体育,http://hls.szsummer.cn/live/446035/playlist.m3u8?k=32f9ec7c13e4
 GAT-未来体育,https://cloud.yumixiu768.com/tmp/123.m3u8
 GAT-香港未视,http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8$博客
 GAT-星光世界,http://ali.hlspull.yximgs.com/live/zxcvbnm9852.flv
-GAT-星空未视,http://wouu.net:9977/udp/239.93.0.156:2193
+GAT-星空未视,http://wouu.net:9977/rtp/239.93.0.156:2193
 GAT-要才财经,http://202.69.67.66:443/webcast/bs高清live-pc/playlist.m3u8
 GAT-要才财经,https://v3.mediacast.hk/webcast/bs高清live-pc/playlist.m3u8
 GAT-中国环球,http://live.cgtn.com/500/prog_index.m3u8
