@@ -103,7 +103,7 @@ def extract_url_part(line):
     return None  # 如果没有匹配到，返回None
 
 # 读取文件AIP记录存档.txt，处理并写入文件IP_old_save.txt
-with open('AIP记录存档.txt', 'r', encoding='utf-8') as file1, open('IP_old_save.txt', 'w', encoding='utf-8') as file2:
+with open('AIP记录存档.txt', 'r', encoding='utf-8') as file1, open('IP_save.txt', 'w', encoding='utf-8') as file2:
     # 创建一个集合来存储非重复的URL部分
     unique_parts = set()
     
@@ -112,7 +112,7 @@ with open('AIP记录存档.txt', 'r', encoding='utf-8') as file1, open('IP_old_s
         # 去除行尾的换行符和空格，并检查是否为空行
         line = line.strip()
         if not line or ',' not in line:  # 如果是空行
-            file2.write(line + '\n')  # 写入原行到文件IP_old_save.txt
+            file2.write(line + '\n')  # 写入原行到文件
         
         # 截取URL部分
         url_part = extract_url_part(line)
@@ -121,85 +121,13 @@ with open('AIP记录存档.txt', 'r', encoding='utf-8') as file1, open('IP_old_s
             if url_part not in unique_parts:
                 # 如果不存在，则添加到集合和文件中
                 unique_parts.add(url_part)
-                file2.write(line + '\n')  # 写入原行到文件2.txt
+                file2.write(line + '\n')  # 写入原行到文件
 #结束去重复###
 #############################################################################split##
 
-#开始排序IP记录将相同频道放到一起####
-
-#载入环境
-import re
-#A版本--自定义排序键函数 固定域名--在前
-def custom_sort_key(item):
-    channel, url = item.split(',')
-
-    channel_letters = ''.join(filter(str.isalpha, channel))
-    channel_numbers = ''.join(filter(str.isdigit, channel))
-
-    if channel_numbers.isdigit():
-        channel_sort_key = (channel_letters, int(channel_numbers))
-    else:
-        channel_sort_key = (channel_letters, 0)
-
-    sort_key = re.search(r"http://(.*?)\.", url)
-    if sort_key:
-        sort_key = sort_key.group(1)
-    else:
-        sort_key = url
-
-    # 检查sort_key是否为数字
-    if sort_key[0].isalpha():
-        sort_key = (0, sort_key)  # 字母开头的sort_key排在最前面
-    elif sort_key.isdigit():
-        sort_key = (1, int(sort_key))  # 数字从小到大排序
-    else:
-        sort_key = (2, sort_key)
-
-    return (channel_sort_key, sort_key)
-
-with open('IP_old_save.txt', 'r', encoding="utf-8") as input_file, open('IP_save.txt', 'a', encoding="utf-8") as output_file:
-    # 读取所有行并存储在列表中
-    lines = input_file.readlines()
-
-    # 过滤掉空白行
-    lines = [line.strip() for line in lines if line.strip()]
-    
-    sorted_data = sorted(lines, key=custom_sort_key)
-
-    # 将排序后的数据写入输出文件
-    for channels in sorted_data: 
-        output_file.write(f"{channels}\n")
-    sorted_data = sorted(lines, key=custom_sort_key)
-#结束#######
 
 #############################################################################split##
 
-#合并自定义频道文件########
-import time
-
-import concurrent.futures
-
-from selenium import webdriver
-
-from selenium.webdriver.chrome.options import Options
-
-import requests
-
-import re
-
-import os
-
-import threading
-
-from queue import Queue
-
-from datetime import datetime
-
-import replace
-
-import fileinput
-
-#重新载入一遍运行环境##############################################################
 
 file_contents = []   #这里含义是打开当前目录下以下文件清单--必须要保证有文件--否则报错
 
