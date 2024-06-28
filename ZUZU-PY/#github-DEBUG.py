@@ -144,7 +144,7 @@ def custom_sort_key(item):
 
     return (channel_sort_key, sort_key)
 
-with open('IP_old_save.txt', 'r', encoding="utf-8") as input_file, open('IP_save-temp.txt', 'a', encoding="utf-8") as output_file:
+with open('IP_old_save.txt', 'r', encoding="utf-8") as input_file, open('IP_save.txt', 'a', encoding="utf-8") as output_file:
     # 读取所有行并存储在列表中
     lines = input_file.readlines()
 
@@ -160,37 +160,7 @@ with open('IP_old_save.txt', 'r', encoding="utf-8") as input_file, open('IP_save
 #结束#######
 
 #############################################################################split##
-# 开始二次去重-定义一个集合用于存储非重复行
-unique_lines = set()
 
-# 定义一个列表用于存储处理后的非重复行
-result_lines = []
-
-# 打开文件
-with open('IP_save-temp.txt', 'r', encoding='utf-8') as file:
-    # 逐行读取文件内容
-    for line in file:
-        # 去除行尾的换行符和空格
-        line = line.strip()
-        
-        # 忽略空行
-        if not line:
-            continue
-        
-        # 如果行不在集合中，则添加到集合和结果列表中
-        if line not in unique_lines:
-            unique_lines.add(line)
-            result_lines.append(line)
-
-# 写入处理后的内容到新的文件或覆盖原文件
-with open('IP_save.txt', 'w', encoding='utf-8') as file:
-    for line in result_lines:
-        # 添加换行符并写入文件
-        file.write(line + '\n')
-
-print("处理完成，结果已保存。")
-
-############################################################################split##
 #合并自定义频道文件########
 import time
 
@@ -2501,39 +2471,22 @@ with open("SOSAZI-over.txt",'w', encoding='utf-8') as file:   #新建输出文�
             file.write(line)
 	#结束---删除IP段任务完成
 
-  ##################################################################################################################################SPLIT#
+
 #开始去重复-打开文档并读取所有行 
-# 定义一个集合用于存储非重复行
-unique_lines = set()
+with open('SOSAZI-over.txt', 'r', encoding="utf-8") as file:
+ lines = file.readlines()
+ 
+#使用列表来存储唯一的行的顺序 
+ unique_lines = [] 
+ seen_lines = set() 
 
-# 定义一个列表用于存储处理后的非重复行
-result_lines = []
+#遍历每一行，如果是新的就加入unique_lines 
+for line in lines:
+ if line not in seen_lines:
+  unique_lines.append(line)
+  seen_lines.add(line)
 
-# 打开文件
-with open('SOSAZI-over.txt', 'r', encoding='utf-8') as file:
-    # 逐行读取文件内容
-    for line in file:
-        # 去除行尾的换行符和空格
-        line = line.strip()
-        
-        # 忽略空行
-        if not line:
-            continue
-        
-        # 如果行不在集合中，则添加到集合和结果列表中
-        if line not in unique_lines:
-            unique_lines.add(line)
-            result_lines.append(line)
-
-# 写入处理后的内容到新的文件或覆盖原文件
-with open('SOSAZI-VERYGOOD.txt', 'w', encoding='utf-8') as file:
-    for line in result_lines:
-        # 添加换行符并写入文件
-        file.write(line + '\n')
-
-print("处理完成，结果已保存")
-
-
+#将唯一的行写入新的文档 
 with open('SOSAZI-VERYGOOD.txt', 'w', encoding="utf-8") as file:
  file.writelines(unique_lines)
 
@@ -2658,8 +2611,6 @@ os.remove("TT26.txt")
 os.remove("TT30.txt")
 
 os.remove("SOSAZI-over.txt")
-
-os.remove("IP_save-temp.txt")
 
 
 print("任务运行完毕")
