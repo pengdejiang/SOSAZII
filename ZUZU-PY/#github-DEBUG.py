@@ -142,6 +142,31 @@ with open('IP_save-jump.txt', 'r', encoding='utf-8') as file1, open('IP_save.txt
 	
 	
 #############################################################################split##
+
+import time
+
+import concurrent.futures
+
+from selenium import webdriver
+
+from selenium.webdriver.chrome.options import Options
+
+import requests
+
+import re
+
+import os
+
+import threading
+
+from queue import Queue
+
+from datetime import datetime
+
+import replace
+
+import fileinput
+
 # 合并自定义频道文件#################################################################################################
 
 file_contents = []   #这里含义是打开当前目录下以下文件清单--必须要保证有文件--否则报错
