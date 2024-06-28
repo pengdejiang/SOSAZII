@@ -91,24 +91,37 @@ for line in fileinput.input("AIP记录存档.txt", inplace=True):  #打开文件
 
 #############################################################################split##
 #开始
-#去重复_打开文档并读取所有行###
+#去重复_打开文档并读取所有行
+#定义一个函数来截取'http://'到'/rtp'之间的字符串
+def extract_url_part(line):
+    # 使用正则表达式来匹配'http://'到'/rtp'之间的字符串
+    # 注意：这里假设'/rtp'之后没有其他'/'字符，否则可能需要更复杂的匹配
+    import re
+    match = re.search(r'http://([^/]*)/rtp', line)
+    if match:
+        return match.group(1)  # 返回匹配到的部分
+    return None  # 如果没有匹配到，返回None
 
-with open('AIP记录存档.txt', 'r', encoding="utf-8") as file:
- lines = file.readlines()
- 
-#使用列表来存储唯一的行的顺序 
- unique_lines = [] 
- seen_lines = set() 
-
-#遍历每一行，如果是新的就加入unique_lines 
-for line in lines:
- if line not in seen_lines:
-  unique_lines.append(line)
-  seen_lines.add(line)
-
-#将唯一的行写入新的文档 
-with open('IP_old_save.txt', 'w', encoding="utf-8") as file:
- file.writelines(unique_lines)
+# 读取文件AIP记录存档.txt，处理并写入文件IP_old_save.txt
+with open('AIP记录存档.txt', 'r', encoding='utf-8') as file1, open('IP_old_save.txt', 'w', encoding='utf-8') as file2:
+    # 创建一个集合来存储非重复的URL部分
+    unique_parts = set()
+    
+    # 逐行读取文件内容
+    for line in file1:
+        # 去除行尾的换行符和空格，并检查是否为空行
+        line = line.strip()
+        if not line or ',' not in line:  # 如果是空行
+            file2.write(line + '\n')  # 写入原行到文件IP_old_save.txt
+        
+        # 截取URL部分
+        url_part = extract_url_part(line)
+        if url_part:  # 如果成功截取到URL部分
+            # 检查URL部分是否已存在于集合中
+            if url_part not in unique_parts:
+                # 如果不存在，则添加到集合和文件中
+                unique_parts.add(url_part)
+                file2.write(line + '\n')  # 写入原行到文件2.txt
 #结束去重复###
 #############################################################################split##
 
