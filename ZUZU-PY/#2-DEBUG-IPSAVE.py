@@ -2506,11 +2506,17 @@ with open('SOSAZI-VERYGOOD.txt', 'w', encoding="utf-8") as file:
 
 #删除所有临时文件--删除清单在下面列出
 
-#os.remove("合并IP.txt")
+os.remove("合并IP.txt")
 
-#os.remove("IP_old_save.txt")
+os.remove("IP_old_save.txt")
 
-#os.remove("IP_savejump.txt")
+os.remove("IP_savejump.txt")
+
+os.remove("对比IP_save.txt")
+
+os.remove("AMER-delete.txt")
+
+os.remove("AMER-start.txt")
 
 os.remove("合并.txt")
 
