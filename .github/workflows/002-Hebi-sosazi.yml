@@ -29,7 +29,7 @@ jobs:
      
 
       - name: Run iptv
-        run: python ${{ github.workspace }}/ZUZU-PY/#github-DEBUG.py
+        run: python ${{ github.workspace }}/ZUZU-PY/#2-DEBUG-IPSAVE.py
       
         
 
