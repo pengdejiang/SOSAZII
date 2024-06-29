@@ -2508,8 +2508,6 @@ with open('SOSAZI-VERYGOOD.txt', 'w', encoding="utf-8") as file:
 
 os.remove("合并IP.txt")
 
-os.remove("IP_old_save.txt")
-
 os.remove("IP_savejump.txt")
 
 os.remove("对比IP_save.txt")
