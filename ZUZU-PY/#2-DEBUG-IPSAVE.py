@@ -132,41 +132,20 @@ with open('IP_save.txt', 'r', encoding='utf-8') as file_in:
 
 
 # 第二次去重复--定义一个集合来存储已经遇到的URL，以便检查重复
-seen_urls = set()
+# 定义一个集合用于存储已经遇到的行
+seen_lines = set()
 
-# 尝试以读取模式打开IP_savejump.txt
-try:
-    with open('IP_savejump.txt', 'r', encoding='utf-8') as jump_file:
-        # 以写入模式打开IP_save.txt，如果文件已存在则会被清空
-        with open('IP_save.txt', 'w', encoding='utf-8') as save_file:
-            # 以写入模式打开对比IP_save.txt，如果文件已存在则会被清空
-            with open('对比IP_save.txt', 'w', encoding='utf-8') as compare_file:
-                for line in jump_file:
-                    # 去除行尾的换行符并忽略空白行
-                    line = line.strip()
-                    if not line or ',' not in line:
-                        # 没有逗号和空白行直接写入IP_save.txt
-                        save_file.write(line + '\n')
-                    else:
-                        # 提取逗号到'/rtp/'之间的URL
-                        start_index = line.find(',')
-                        if start_index != -1:
-                            end_index = line.find('/rtp/', start_index)
-                            if end_index != -1:
-                                url = line[start_index+1:end_index]
-                                # 检查URL是否重复
-                                if url not in seen_urls:
-                                    seen_urls.add(url)
-                                    # 写入对比IP_save.txt
-                                    compare_file.write(url + '\n')
-except FileNotFoundError:
-    print("文件IP_savejump.txt不存在。")
-except Exception as e:
-    print(f"发生错误：{e}")
-
-print("处理完成。")
-
-
+# 使用 'with' 语句确保文件在操作完成后正确关闭
+with open('IP_savejump.txt', 'r', encoding='utf-8') as file_in, \
+     open('IP_save.txt', 'w', encoding='utf-8') as file_out:
+    # 逐行读取 IP_savejump.txt 文件
+    for line in file_in:
+        # 去除行尾的换行符，并检查该行是否已经在集合中
+        stripped_line = line.strip()
+        if stripped_line not in seen_lines:
+            # 如果不在集合中，将其写入到 IP_save.txt 并添加到集合中
+            file_out.write(line)
+            seen_lines.add(stripped_line)
 #分割分割###################
 #分割分割###################
 #分割分割###################
