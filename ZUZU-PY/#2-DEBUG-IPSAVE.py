@@ -2510,8 +2510,6 @@ os.remove("合并IP.txt")
 
 os.remove("IP_savejump.txt")
 
-#os.remove("对比IP_save.txt")
-
 os.remove("AMER-delete.txt")
 
 os.remove("AMER-start.txt")
