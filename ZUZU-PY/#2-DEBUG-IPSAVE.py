@@ -72,6 +72,7 @@ for file_path in file_paths:
 with open("合并IP.txt", "w", encoding="utf-8") as output:
 
     output.write('\n'.join(file_contents))
+	
 
 #分割分割###################
 #分割分割###################
@@ -170,6 +171,8 @@ with open('IP_old_save.txt', 'r', encoding="utf-8") as input_file, open('IP_save
     for channels in sorted_data: 
         output_file.write(f"{channels}\n")
     sorted_data = sorted(lines, key=custom_sort_key)
+	
+	
 #结束#######
 
 #分割分割###################
@@ -251,6 +254,19 @@ print("处理完成。")
 #分割分割###################
 #分割分割###################
 #分割分割###################
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2590,13 +2606,13 @@ with open('SOSAZI-VERYGOOD.txt', 'w', encoding="utf-8") as file:
 
 #删除所有临时文件--删除清单在下面列出
 
-os.remove("合并IP.txt")
+#os.remove("合并IP.txt")
 
-os.remove("AIP记录存档.txt")
+#os.remove("AIP记录存档.txt")
 
-os.remove("IP_old_save.txt")
+#os.remove("IP_old_save.txt")
 
-os.remove("IP_savejump.txt")
+#os.remove("IP_savejump.txt")
 
 os.remove("合并.txt")
 
