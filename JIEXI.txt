@@ -40,12 +40,10 @@ WZ浙江卫视,http://tnvcn.com:8012/rtp/239.3.1.137:8036$北京联通1+
 WC重庆卫视,http://tnvcn.com:8012/rtp/239.3.1.122:8160$北京联通1+
 
 CCTV1,http://joyznm.x3322.net:20000/rtp/239.3.1.129:8008$北/京联通3+
-CCTV2,http://joyznm.x3322.net:20000/rtp/239.3.1.60:8084$北/京联通3+
 CCTV3,http://joyznm.x3322.net:20000/rtp/239.3.1.172:8001$北/京联通3+
 CCTV4,http://joyznm.x3322.net:20000/rtp/239.3.1.105:8092$北/京联通3+
 CCTV5,http://joyznm.x3322.net:20000/rtp/239.3.1.173:8001$北/京联通3+
 CCTV5+,http://joyznm.x3322.net:20000/rtp/239.3.1.130:8004$北/京联通3+
-CCTV6,http://joyznm.x3322.net:20000/rtp/239.3.1.174:8001$北/京联通3+
 CCTV7,http://joyznm.x3322.net:20000/rtp/239.3.1.61:8104$北/京联通3+
 CCTV8,http://joyznm.x3322.net:20000/rtp/239.3.1.175:8001$北/京联通3+
 CCTV9,http://joyznm.x3322.net:20000/rtp/239.3.1.62:8112$北/京联通3+
@@ -1185,14 +1183,12 @@ WC重庆卫视,http://www.lizhinas.top:8688/rtp/239.252.220.94:5140$江/西电�
 江XZ东方财经,http://www.lizhinas.top:8688/rtp/239.252.219.57:5140$江/西电信3+
 
 CCTV1,http://media.shaohong86.cn:8888/rtp/238.255.2.91:5999$毕节\电信1+
-CCTV2,http://media.shaohong86.cn:8888/rtp/238.255.2.11:5999$毕节\电信1+
 CCTV3,http://media.shaohong86.cn:8888/rtp/238.255.2.133:5999$毕节\电信1+
 CCTV4,http://media.shaohong86.cn:8888/rtp/238.255.2.92:5999$毕节\电信1+
 CCTV4U,http://media.shaohong86.cn:8888/rtp/238.255.2.213:5999$毕节\电信1+
 CCTV4M,http://media.shaohong86.cn:8888/rtp/238.255.2.214:5999$毕节\电信1+
 CCTV5,http://media.shaohong86.cn:8888/rtp/238.255.2.134:5999$毕节\电信1+
 CCTV5+,http://media.shaohong86.cn:8888/rtp/238.255.2.185:5999$毕节\电信1+
-CCTV6,http://media.shaohong86.cn:8888/rtp/238.255.2.135:5999$毕节\电信1+
 CCTV7,http://media.shaohong86.cn:8888/rtp/238.255.2.12:5999$毕节\电信1+
 CCTV8,http://media.shaohong86.cn:8888/rtp/238.255.2.136:5999$毕节\电信1+
 CCTV9,http://media.shaohong86.cn:8888/rtp/238.255.2.155:5999$毕节\电信1+
