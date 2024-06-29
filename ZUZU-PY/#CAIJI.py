@@ -65,7 +65,7 @@ for keyword in keywords:
     current_time = datetime.now()
     timeout_cnt = 0
     result_urls = set() 
-    while len(result_urls) == 0 and timeout_cnt <= 10:
+    while len(result_urls) == 0 and timeout_cnt <= 5:
         try:
             search_url = 'https://fofa.info/result?qbase64='
             search_txt = f'\"udpxy\" && country=\"CN\" && region=\"{province}\" && org=\"{org}\"'
@@ -130,7 +130,7 @@ for keyword in keywords:
         except (requests.Timeout, requests.RequestException) as e:
             timeout_cnt += 1
             print(f"{current_time} [{province}]搜索请求发生超时，异常次数：{timeout_cnt}")
-            if timeout_cnt <= 5:
+            if timeout_cnt <= 3:
                     # 继续下一次循环迭代
                 continue
             else:
