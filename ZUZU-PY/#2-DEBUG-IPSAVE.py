@@ -186,9 +186,9 @@ with open('IP_old_save.txt', 'r', encoding="utf-8") as input_file, open('IP_save
 import shutil
 
 # 源文件路径
-source_file = 'IP-save.txt'
+source_file = 'IP_save.txt'
 # 目标文件路径（新文件名）
-destination_file = 'IP-savejump.txt'
+destination_file = 'IP_savejump.txt'
 
 # 使用shutil的copy2函数来复制文件
 # copy2函数会尝试保留文件的所有元数据，包括权限和时间戳
@@ -210,18 +210,18 @@ print(f"文件已成功复制，新文件名为：{destination_file}")
 # 第二次去重复--定义一个集合来存储已经遇到的URL，以便检查重复
 seen_urls = set()
 
-# 尝试以读取模式打开IP-savejump.txt
+# 尝试以读取模式打开IP_savejump.txt
 try:
-    with open('IP-savejump.txt', 'r', encoding='utf-8') as jump_file:
-        # 以写入模式打开IP-save.txt，如果文件已存在则会被清空
-        with open('IP-save.txt', 'w', encoding='utf-8') as save_file:
-            # 以写入模式打开对比IP-save.txt，如果文件已存在则会被清空
-            with open('对比IP-save.txt', 'w', encoding='utf-8') as compare_file:
+    with open('IP_savejump.txt', 'r', encoding='utf-8') as jump_file:
+        # 以写入模式打开IP_save.txt，如果文件已存在则会被清空
+        with open('IP_save.txt', 'w', encoding='utf-8') as save_file:
+            # 以写入模式打开对比IP_save.txt，如果文件已存在则会被清空
+            with open('对比IP_save.txt', 'w', encoding='utf-8') as compare_file:
                 for line in jump_file:
                     # 去除行尾的换行符并忽略空白行
                     line = line.strip()
                     if not line or ',' not in line:
-                        # 没有逗号和空白行直接写入IP-save.txt
+                        # 没有逗号和空白行直接写入IP_save.txt
                         save_file.write(line + '\n')
                     else:
                         # 提取逗号到'/rtp/'之间的URL
@@ -233,10 +233,10 @@ try:
                                 # 检查URL是否重复
                                 if url not in seen_urls:
                                     seen_urls.add(url)
-                                    # 写入对比IP-save.txt
+                                    # 写入对比IP_save.txt
                                     compare_file.write(url + '\n')
 except FileNotFoundError:
-    print("文件IP-savejump.txt不存在。")
+    print("文件IP_savejump.txt不存在。")
 except Exception as e:
     print(f"发生错误：{e}")
 
@@ -2596,7 +2596,7 @@ os.remove("AIP记录存档.txt")
 
 os.remove("IP_old_save.txt")
 
-os.remove("IP-savejump.txt")
+os.remove("IP_savejump.txt")
 
 os.remove("合并.txt")
 
