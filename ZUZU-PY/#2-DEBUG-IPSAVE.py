@@ -90,90 +90,15 @@ pattern = '|'.join(keywords)  # 创建正则表达式模式，匹配任意一个
 
 #pattern = r"^(.*?),(?!#genre#)(.*?)$" #以分类直接复制
 
-with open('合并IP.txt', 'r', encoding='utf-8') as file, open('AIP记录存档.txt', 'w', encoding='utf-8') as AIP记录存档:    #####定义临时文件名
+with open('合并IP.txt', 'r', encoding='utf-8') as file, open('IP_save.txt', 'a', encoding='utf-8') as IP_save:
 
     for line in file:
 
         if re.search(pattern, line) and line.count(',') == 1:  # 如果行中有任意关键字而且行内只有一个逗号
 
-         AIP记录存档.write(line)  # 将该行写入输出文件 #####定义临时文件
-
-for line in fileinput.input("AIP记录存档.txt", inplace=True):  #打开文件，并对其进行关键词原地替换    
-
-    print(line, end="")  #设置end=""，避免输出多余的换行符 
-#结束提取写入########################################################
+         IP_save.write(line)  # 将该行写入文件
 
 #########################split##
-#开始
-#去重复_打开文档并读取所有行###
-
-with open('AIP记录存档.txt', 'r', encoding="utf-8") as file:
- lines = file.readlines()
- 
-#使用列表来存储唯一的行的顺序 
- unique_lines = [] 
- seen_lines = set() 
-
-#遍历每一行，如果是新的就加入unique_lines 
-for line in lines:
- if line not in seen_lines:
-  unique_lines.append(line)
-  seen_lines.add(line)
-
-#将唯一的行写入新的文档 
-with open('IP_old_save.txt', 'w', encoding="utf-8") as file:
- file.writelines(unique_lines)
-#结束去重复###
-#########################split##
-
-#开始排序IP记录将相同频道放到一起####
-
-#载入环境
-import re
-#A版本--自定义排序键函数 固定域名--在前
-def custom_sort_key(item):
-    channel, url = item.split(',')
-
-    channel_letters = ''.join(filter(str.isalpha, channel))
-    channel_numbers = ''.join(filter(str.isdigit, channel))
-
-    if channel_numbers.isdigit():
-        channel_sort_key = (channel_letters, int(channel_numbers))
-    else:
-        channel_sort_key = (channel_letters, 0)
-
-    sort_key = re.search(r"http://(.*?)\.", url)
-    if sort_key:
-        sort_key = sort_key.group(1)
-    else:
-        sort_key = url
-
-    # 检查sort_key是否为数字
-    if sort_key[0].isalpha():
-        sort_key = (0, sort_key)  # 字母开头的sort_key排在最前面
-    elif sort_key.isdigit():
-        sort_key = (1, int(sort_key))  # 数字从小到大排序
-    else:
-        sort_key = (2, sort_key)
-
-    return (channel_sort_key, sort_key)
-
-with open('IP_old_save.txt', 'r', encoding="utf-8") as input_file, open('IP_save.txt', 'a', encoding="utf-8") as output_file:
-    # 读取所有行并存储在列表中
-    lines = input_file.readlines()
-
-    # 过滤掉空白行
-    lines = [line.strip() for line in lines if line.strip()]
-    
-    sorted_data = sorted(lines, key=custom_sort_key)
-
-    # 将排序后的数据写入输出文件
-    for channels in sorted_data: 
-        output_file.write(f"{channels}\n")
-    sorted_data = sorted(lines, key=custom_sort_key)
-	
-	
-#结束#######
 
 #分割分割###################
 #分割分割###################
@@ -186,18 +111,14 @@ with open('IP_old_save.txt', 'r', encoding="utf-8") as input_file, open('IP_save
 
 
 
-import shutil
-
-# 源文件路径
-source_file = 'IP_save.txt'
-# 目标文件路径（新文件名）
-destination_file = 'IP_savejump.txt'
-
-# 使用shutil的copy2函数来复制文件
-# copy2函数会尝试保留文件的所有元数据，包括权限和时间戳
-shutil.copy2(source_file, destination_file)
-
-print(f"文件已成功复制，新文件名为：{destination_file}")
+# 打开IP_save.txt文件以读取内容
+with open('IP_save.txt', 'r', encoding='utf-8') as file_in:
+    # 打开或创建IP_savejump.txt文件以写入内容
+    with open('IP_savejump.txt', 'w', encoding='utf-8') as file_out:
+        # 逐行读取IP_save.txt的内容
+        for line in file_in:
+            # 将读取到的内容写入IP_savejump.txt
+            file_out.write(line)
 
 
 #分割分割###################
@@ -2607,8 +2528,6 @@ with open('SOSAZI-VERYGOOD.txt', 'w', encoding="utf-8") as file:
 #删除所有临时文件--删除清单在下面列出
 
 #os.remove("合并IP.txt")
-
-#os.remove("AIP记录存档.txt")
 
 #os.remove("IP_old_save.txt")
 
