@@ -12,9 +12,7 @@ CCTV1,http://59.56.214.134:8000/rtp/239.61.3.60:9878
 CCTV1,http://58.42.184.132:8888/rtp/238.255.2.91:5999$毕节\电信
 CCTV1,http://27.190.0.37:7000/rtp/239.254.200.45:8008$河\北电信
 CCTV1,http://27.191.203.159:14000/rtp/239.254.200.45:8008$河\北电信
-CCTV2,http://joyznm.x3322.net:20000/rtp/239.3.1.60:8084$北/京联通3+
 CCTV2,http://liveop.cctv.cn/hls/CCTV28bee868714f04ea2af79947bb9b46fc3H/playlist.m3u8$
-CCTV2,http://media.shaohong86.cn:8888/rtp/238.255.2.11:5999$毕节\电信1+
 CCTV2,http://ngwy.9966.org:8888/rtp/239.3.1.60:8084$北/京联通0+
 CCTV2,http://tnvcn.com:8012/rtp/239.3.1.60:8084$北/京联通1+
 CCTV2,http://www.lizhinas.top:8688/rtp/239.252.220.183:5140$江/西电信3+
@@ -73,8 +71,6 @@ CCTV5+,http://27.190.0.37:7000/rtp/239.254.200.46:8004$河\北电信
 CCTV5+,http://27.191.203.159:14000/rtp/239.254.200.46:8004$河\北电信
 CCTV5,http://27.190.0.37:7000/rtp/239.254.201.153:7206$河\北电信
 CCTV5,http://27.191.203.159:14000/rtp/239.254.201.153:7206$河\北电信
-CCTV6,http://joyznm.x3322.net:20000/rtp/239.3.1.174:8001$北/京联通3+
-CCTV6,http://media.shaohong86.cn:8888/rtp/238.255.2.135:5999$毕节\电信1+
 CCTV6,http://mobilelive-ds.ysp.cctv.cn/ysp/2013693901.m3u8$D
 CCTV6,http://ngwy.9966.org:8888/rtp/239.3.1.174:8001$北/京联通0+
 CCTV6,http://tnvcn.com:8012/rtp/239.3.1.174:8001$北/京联通1+
