@@ -9,7 +9,7 @@ future_time = current_time + timedelta(hours=8)
 # 格式化时间字符串
 formatted_future_time = future_time.strftime("%Y-%m-%d %H:%M:%S")
 
-# 打开文件，以追加模式写入空白五行、计算后的时间和空白一行
+# 打开文件，以追加模式写入空白2行、计算后的时间和空白1行
 with open('IP_save.txt', 'a', encoding='utf-8') as file:
     file.write('\n' * 2)  # 写入空白2行
     file.write(formatted_future_time + '\n')  # 写入计算后的时间
